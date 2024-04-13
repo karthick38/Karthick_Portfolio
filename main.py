@@ -107,7 +107,7 @@ def contact():
 
 @app.route("/download")
 def download_resume():
-    return send_from_directory('static', path="file/Resume_Karthick_Chandrasekaran.pdf", as_attachment=True)
+    return send_from_directory('static', path="file/RESUME_SDE_KARTHICK.pdf", as_attachment=True)
 
 
 if __name__ == "__main__":
