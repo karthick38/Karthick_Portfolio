@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+    {% include 'header.html' %}
+
+    <body class="d-flex flex-column h-100 ">
+         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+        <main class="flex-shrink-0">
+            <!-- Navigation-->
+
+            <!-- Header-->
+            <header class="py-5" >
+                <div class="container px-5 pb-5 center-container">
+<!--                    <div class="row gx-5 align-items-center">-->
+<!--                        <div class="col-xxl-5">-->
+                            <!-- Header text content-->
+                            <div class="text-center text-xxl-center">
+                                <img  class="img-thumbnail" style="border: none;width: 70%; height:50% "  src="https://cdn.pixabay.com/photo/2017/11/27/21/31/computer-2982270_1280.jpg" alt="profile picture">
+                                <h1 class="display-3 fw-bolder mb-5"><span class="text-primary d-inline">Karthick Chandrasekaran</span></h1>
+                                <div class="fs-3 fw-bolder text-black">Software Developer</div>
+                                 <div class="badge bg-gradient-primary-to-secondary text-black mb-4"><div class="">⌨️ Programming 🔼 Development 📖 Learning </div></div>
+
+                                <div class="d-grid gap-3 d-sm-flex justify-content-sm-center justify-content-xxl-center mb-3">
+                                    <a class="btn btn-primary btn-lg px-5 py-3 me-sm-3 fs-6 fw-bolder" href="{{url_for('resume')}}">Resume</a>
+                                    <a class="btn btn-light btn-lg px-5 py-3 fs-6 fw-bolder" href="{{url_for('project')}}">Projects</a>
+                                </div>
+
+<!--                            </div>-->
+                            </div>
+<!--                        <div class="col-xxl-7">-->
+<!--                            &lt;!&ndash; Header profile picture&ndash;&gt;-->
+<!--                            <div class="d-flex justify-content-center mt-5 mt-xxl-0">-->
+<!--                                <div class="profile bg-gradient-primary-to-secondary">-->
+<!--                                    &lt;!&ndash; TIP: For best results, use a photo with a transparent background like the demo example below&ndash;&gt;-->
+<!--                                    &lt;!&ndash; Watch a tutorial on how to do this on YouTube (link)&ndash;&gt;-->
+<!--&lt;!&ndash;                                    <img class="profile-img" src="https://media.istockphoto.com/id/1832084202/photo/black-individual-edits-footage-on-laptop.jpg?s=612x612&w=0&k=20&c=WobswFz9dyCyVjYsjXRchxX5nt-9rg5OcVP-YbgYphA=" alt="...">&ndash;&gt;-->
+
+<!--                                    </div>-->
+<!--                                </div>-->
+<!--                            </div>-->
+<!--                        </div>-->
+
+<!--                            </div>-->
+<!--                    <div><img src="https://media.istockphoto.com/id/1091348950/photo/close-up-of-hands-typing-on-laptop-night-work-concept.jpg?s=612x612&w=0&k=20&c=zbsP8zNPpur8dca1E_kIZ6q0uFsxxUBmlm_1LJ8OmMY=" class="rounded float-start" alt="..."></div>-->
+                </div>
+            </header>
+            <!-- About Section-->
+            <section class="bg-light py-5">
+                <div class="container px-5">
+                    <div class="row gx-5 justify-content-center">
+                        <div class="col-xxl-8">
+                            <div class="text-center my-5">
+                                <h2 class="display-5 fw-bolder"><span class="text-gradient d-inline">About Me</span></h2>
+                                <p class="lead fw-light mb-4">My name is Karthick</p>
+                                <p class="text-muted">Experienced software developer with over 3.5 years of IT experience, including 2.5 years of practical expertise in Python and various software development tools. Adept collaborator skilled in requirement analysis and delivering top-tier solutions. Committed to ongoing learning and enthusiastic about contributing to innovative projects within collaborative team settings.</p>
+                                <div class="d-flex justify-content-center fs-2 gap-4">
+                                    <a class="text-gradient" href="https://twitter.com/Karthick_C_"><i class="bi bi-twitter"></i></a>
+                                    <a class="text-gradient" href="https://www.linkedin.com/in/karthick-chandrasekarankaran-180022146/"><i class="bi bi-linkedin"></i></a>
+                                    <a class="text-gradient" href="https://github.com/karthick38"><i class="bi bi-github"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+        <!-- Footer-->
+        {% include 'footer.html' %}
+        <!-- Bootstrap core JS-->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+        <!-- Core theme JS-->
+        <script src="{{url_for('static', filename='js/scripts.js')}}"></script>
+    </body>
+</html>
