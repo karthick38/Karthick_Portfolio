@@ -1,3 +1,5 @@
+
+
 from flask import Flask, render_template, send_from_directory, redirect, url_for, flash
 from flask_bootstrap import Bootstrap5
 from flask_wtf import FlaskForm
@@ -5,7 +7,7 @@ from wtforms import StringField, SubmitField, validators
 from wtforms.fields.simple import TextAreaField
 from wtforms.validators import Email, DataRequired
 import smtplib
-
+import os
 '''
 Red underlines? Install the required packages first: 
 Open the Terminal in PyCharm (bottom left). 
@@ -20,8 +22,8 @@ This will install the packages from requirements.txt for this project.
 '''
 
 # SENDING MAIL FROM CONTACT PAGE
-OWN_EMAIL = 'Karthickchandrasekaran05@gmail.com'
-OWN_PASSWORD = 'tzejrcoansifkvvu'
+OWN_EMAIL = os.environ.get('OWN_EMAIL')
+OWN_PASSWORD = os.environ.get('OWN_PASSWORD')
 
 
 def send_email(form):
@@ -73,7 +75,7 @@ class ContactForm(FlaskForm):
 
 
 app = Flask(__name__)
-app.secret_key = "_SECRETKEY_"
+app.secret_key = os.environ.get('FLASK_KEY')
 bootstrap = Bootstrap5(app)  # initialise bootstrap-flask
 
 
@@ -109,4 +111,4 @@ def download_resume():
 
 
 if __name__ == "__main__":
-    app.run(debug=True)
+    app.run(debug=False)
